@@ -4,10 +4,6 @@ createApp({
     data() {
         return {
             newTask: '',
-            newTaskContent: {
-                text: '',
-                done: false,
-            },
             tasks: [
                 {
                     text: 'Fare il nuovo esercizio',
@@ -30,8 +26,7 @@ createApp({
         },
 
         addTask() {
-            this.tasks.push(this.newTaskContent)
-            console.log(this.newTask)
+            this.tasks.push({text : this.newTask, done: false})
         }
 
     },
