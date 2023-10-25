@@ -65,6 +65,10 @@ menu {
     font-size: 20px;
 }
 
+.icon {
+    padding: 10px; 
+}
+
 /*UTILITY CLASSES*/
 
 .done {
