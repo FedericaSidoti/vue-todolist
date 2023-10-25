@@ -23,9 +23,8 @@
             <div class="list-container">
                 <h2>Nuova Lista</h2>
                 <ul class="list"> 
-                    <li class="task">
-                        <p>{{tasks[0].text}}</p>
-                        <button class="button">Fatto</button>
+                    <li v-for="(task, index) in tasks" class="task">
+                        <p :class="task.done === true? 'done' : '' ">{{tasks[index].text}}</p>
                         <div class="icon">x</div>
                     </li>
                 </ul>

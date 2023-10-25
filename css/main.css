@@ -64,3 +64,9 @@ menu {
     padding: 5px 10px;
     font-size: 20px;
 }
+
+/*UTILITY CLASSES*/
+
+.done {
+    text-decoration: line-through;
+}
