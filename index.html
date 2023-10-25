@@ -15,9 +15,10 @@
         <section class="section">
             <div class="container">
                 <p>Aggiungi qui il tuo task</p>
-                <input class="input" type="text">
-                <button class="button">Aggiungi</button>
+                <input v-model="newTask" class="input" type="text">
+                <button @click="addTask" class="button">Aggiungi</button>
             </div>
+            <div>{{this.newTaskContent}}</div>
         </section>
         <section class="section">
             <div class="list-container">

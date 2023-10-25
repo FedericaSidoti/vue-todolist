@@ -3,6 +3,11 @@ const createApp = Vue.createApp
 createApp({
     data() {
         return {
+            newTask: '',
+            newTaskContent: {
+                text: '',
+                done: false,
+            },
             tasks: [
                 {
                     text: 'Fare il nuovo esercizio',
@@ -22,6 +27,11 @@ createApp({
     methods : {
         removeTask(index) {
             this.tasks.splice(index, 1)
+        },
+
+        addTask() {
+            this.tasks.push(this.newTaskContent)
+            console.log(this.newTask)
         }
 
     },
