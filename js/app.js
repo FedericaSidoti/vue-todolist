@@ -28,6 +28,9 @@ createApp({
         addTask() {
             this.tasks.push({text : this.newTask, done: false})
             this.newTask = ''
+        },
+        isDone(index) {
+            this.tasks[index].done = !this.tasks[index].done
         }
 
     },
