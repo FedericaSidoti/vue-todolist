@@ -10,6 +10,10 @@ menu {
     list-style: none;
 }
 
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .container, .list-container {
     margin: 0 auto; 
     max-width: 900px;
@@ -20,23 +24,35 @@ menu {
 }
 
 .section {
-    padding: 80px; 
+    padding: 30px; 
     font-size: 30px;
+    margin-bottom: 20px; 
 }
 
-.header {
+.page-header {
     padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    gap: 10px;
 }
 
 .page-title {
     text-align: center;
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.text, .h2 {
+    margin-bottom: 15px;
 }
 
 .input {
     padding: 15px;
     font-size: 20px;
+    margin-right: 10px;
 }
 
 .list {
@@ -59,13 +75,24 @@ menu {
     padding: 20px;
 }
 
+.task-text {
+    flex-grow: 1;
+}
+
 .button {
-    padding: 5px 10px;
+    padding: 10px 15px;
     font-size: 20px;
+    background-color: azure;
+    border: 1px solid blue;
+    font-weight: 600;
+    color: blue;
 }
 
 .icon {
     padding: 10px; 
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 50px;
 }
 
 /*UTILITY CLASSES*/
@@ -75,5 +102,5 @@ menu {
 }
 
 .bg-green {
-    background-color: aquamarine;
+    background-color: #74E067;
 }

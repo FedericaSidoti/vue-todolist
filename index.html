@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <title>Vue To Do List</title>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
@@ -10,21 +13,24 @@
 <body>
     <div id="app">
         <header class="page-header">
+            <img src="./Logo.png">
             <h1 class="page-title"> To Do List</h1>
         </header>
         <section class="section">
             <div class="container">
-                <p>Aggiungi qui il tuo task</p>
-                <input @keyup.enter="addTask" v-model="newTask" class="input" type="text">
-                <button @click="addTask" class="button">Aggiungi</button>
+                <p class="text">Aggiungi qui il tuo task</p>
+                <div class="btn-wrapper">
+                    <input @keyup.enter="addTask" v-model="newTask" class="input" type="text">
+                    <button @click="addTask" class="button">Aggiungi</button>
+                </div>
             </div>
         </section>
         <section class="section">
             <div class="list-container">
-                <h2>Nuova Lista</h2>
+                <h2 class="h2">Nuova Lista</h2>
                 <ul v-if="tasks.length > 0" class="list"> 
                     <li @click="isDone(index)" v-for="(task, index) in tasks" class="task" :class="task.done === true? 'bg-green' : '' ">
-                        <p :class="task.done === true? 'done' : '' ">{{tasks[index].text}}</p>
+                        <p class="task-text" :class="task.done === true? 'done' : '' ">{{task.text}}</p>
                         <div v-if="task.done === true">Fatto!</div>
                         <div @click.stop="removeTask(index)" class="icon">x</div>
                     </li>
